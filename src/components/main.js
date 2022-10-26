@@ -1,14 +1,19 @@
 import React from "react";
+
 import "../styles/Main.css";
 import CvPrev from "./CvPreview/CvPrev";
+import { PrintCv } from "./CvPreview/CvPrev.print";
+
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <main className="main">
         <div className="cv-form"></div>
-        <div className="cv-preview">
-          <CvPrev />
-        </div>
+        <PrintCv />
       </main>
     );
   }

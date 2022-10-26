@@ -10,7 +10,7 @@ class CvPrev extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="cv-preview">
         <div className="left-side">
           <img
             src="./example.webp"
@@ -150,7 +150,7 @@ class CvPrev extends React.Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }

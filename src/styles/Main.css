@@ -1,7 +1,6 @@
 .main {
   gap: 3rem;
   display: flex;
-  position: relative;
   justify-content: center;
   padding: 3rem;
 }
@@ -13,7 +12,7 @@
 .cv-preview {
   height: 1123px;
   width: 794px;
-  border: 1px solid black;
+  box-shadow: -9px 1px 28px 7px rgba(0, 0, 0, 0.35);
   position: sticky;
   top: 1rem;
   display: flex;

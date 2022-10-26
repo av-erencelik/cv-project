@@ -157,3 +157,22 @@
 .program-description {
   font-size: 0.8rem;
 }
+.print {
+  position: absolute;
+  top: 75px;
+  left: 70%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #eeeeee;
+  background-color: #3c4048;
+  border-radius: 7px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.print:hover {
+  scale: 1.1;
+}
