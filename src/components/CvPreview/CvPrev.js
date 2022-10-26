@@ -44,7 +44,13 @@ class CvPrev extends React.Component {
             </div>
           </div>
         </div>
-        <div className="right-side"></div>
+        <div className="right-side">
+          <div className="personal-info">
+            <div className="name-title">
+              <h1 className="name">Name Surname</h1>
+            </div>
+          </div>
+        </div>
       </>
     );
   }
