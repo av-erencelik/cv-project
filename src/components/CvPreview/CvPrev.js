@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/CvPrev.css";
+import { IoLocation } from "react-icons/io5";
 
 class CvPrev extends React.Component {
   constructor(props) {
@@ -48,6 +49,13 @@ class CvPrev extends React.Component {
           <div className="personal-info">
             <div className="name-title">
               <h1 className="name">Name Surname</h1>
+              <h3 className="person-title">Junior Web Developer</h3>
+            </div>
+            <div className="contact">
+              <p className="address">
+                <IoLocation /> Cecelia Havens 456 White Finch St. North Augusta,
+                SC 29860
+              </p>
             </div>
           </div>
         </div>
