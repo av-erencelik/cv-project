@@ -99,6 +99,7 @@
 .date-city-company {
   width: 100%;
   line-height: 1.4;
+  max-width: 24%;
 }
 .company {
   font-weight: 600;
@@ -113,6 +114,8 @@
 }
 .job-description {
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
 }
 .job-title {
   font-size: 0.9rem;
@@ -120,5 +123,37 @@
   text-transform: capitalize;
 }
 .description {
+  font-size: 0.8rem;
+}
+.educations {
+  padding-top: 2rem;
+}
+.education {
+  padding-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.education-title {
+  font-weight: 600;
+}
+.uni-city-date {
+  width: 100%;
+  line-height: 1.4;
+  max-width: 24%;
+}
+.university {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.edu-description {
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+.program-name {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.program-description {
   font-size: 0.8rem;
 }

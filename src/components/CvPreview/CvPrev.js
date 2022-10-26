@@ -95,15 +95,13 @@ class CvPrev extends React.Component {
                 <h4 className="job-title">Junior Web Developer</h4>
                 <p className="description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
-                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
-                  libero, ac pharetra erat est sit amet tellus.
+                  Vestibulum tempus imperdiet nisl sed vestibulum.
                 </p>
               </div>
             </div>
             <div className="experience">
               <div className="date-city-company">
-                <h4 className="company">Example Ltd</h4>
+                <h4 className="company">Example Example Example Ltd</h4>
                 <p className="city">Example City</p>
                 <p className="date">2016-2018</p>
               </div>
@@ -114,6 +112,39 @@ class CvPrev extends React.Component {
                   Vestibulum tempus imperdiet nisl sed vestibulum. Donec
                   gravida, nulla eget blandit fermentum, mauris nisi rutrum
                   libero, ac pharetra erat est sit amet tellus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="educations">
+            <h3 className="education-title">EDUCATION</h3>
+            <div className="education">
+              <div className="uni-city-date">
+                <h4 className="university">University Of Example</h4>
+                <p className="city">Example City</p>
+                <p className="date">2012-2016</p>
+              </div>
+              <div className="edu-description">
+                <h4 className="program-name">Bachelor Of Computer Science</h4>
+                <p className="program-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
+                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
+                  libero, ac pharetra erat est sit amet tellus.
+                </p>
+              </div>
+            </div>
+            <div className="education">
+              <div className="uni-city-date">
+                <h4 className="university">University Of Example</h4>
+                <p className="city">Example City</p>
+                <p className="date">2012-2016</p>
+              </div>
+              <div className="edu-description">
+                <h4 className="program-name">Master of IT</h4>
+                <p className="program-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum tempus imperdiet.
                 </p>
               </div>
             </div>
