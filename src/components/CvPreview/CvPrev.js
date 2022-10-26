@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/CvPrev.css";
 import { IoLocation } from "react-icons/io5";
+import { AiFillPhone, AiFillMail } from "react-icons/ai";
 
 class CvPrev extends React.Component {
   constructor(props) {
@@ -53,8 +54,16 @@ class CvPrev extends React.Component {
             </div>
             <div className="contact">
               <p className="address">
-                <IoLocation /> Cecelia Havens 456 White Finch St. North Augusta,
-                SC 29860
+                <IoLocation className="logo" />
+                Cecelia Havens 456 White Finch St. North Augusta, SC 29860
+              </p>
+              <p className="phone">
+                <AiFillPhone className="logo" />
+                +1234-567-8910
+              </p>
+              <p className="mail">
+                <AiFillMail className="logo" />
+                name.surname@gmail.com
               </p>
             </div>
           </div>
