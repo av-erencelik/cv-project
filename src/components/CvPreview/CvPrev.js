@@ -67,6 +67,57 @@ class CvPrev extends React.Component {
               </p>
             </div>
           </div>
+          <div className="experiences">
+            <h3 className="experience-title">WORK EXPERIENCE</h3>
+            <div className="experience">
+              <div className="date-city-company">
+                <h4 className="company">Example Ltd</h4>
+                <p className="city">Example City</p>
+                <p className="date">2016-2018</p>
+              </div>
+              <div className="job-description">
+                <h4 className="job-title">Junior Web Developer</h4>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
+                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
+                  libero, ac pharetra erat est sit amet tellus.
+                </p>
+              </div>
+            </div>
+            <div className="experience">
+              <div className="date-city-company">
+                <h4 className="company">Example Ltd</h4>
+                <p className="city">Example City</p>
+                <p className="date">2016-2018</p>
+              </div>
+              <div className="job-description">
+                <h4 className="job-title">Junior Web Developer</h4>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
+                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
+                  libero, ac pharetra erat est sit amet tellus.
+                </p>
+              </div>
+            </div>
+            <div className="experience">
+              <div className="date-city-company">
+                <h4 className="company">Example Ltd</h4>
+                <p className="city">Example City</p>
+                <p className="date">2016-2018</p>
+              </div>
+              <div className="job-description">
+                <h4 className="job-title">Junior Web Developer</h4>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
+                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
+                  libero, ac pharetra erat est sit amet tellus.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </>
     );

@@ -23,7 +23,7 @@
   margin-top: 1rem;
 }
 .about-title {
-  font-weight: 400;
+  font-weight: 600;
 }
 .about-text {
   font-size: 0.7rem;
@@ -35,7 +35,7 @@
   padding-bottom: 3rem;
 }
 .social-media-title {
-  font-weight: 400;
+  font-weight: 600;
 }
 .link {
   margin-top: 1.5rem;
@@ -53,7 +53,7 @@
   padding-top: 0.5rem;
 }
 .name {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 0.2rem;
@@ -64,14 +64,14 @@
   flex-direction: column;
 }
 .address {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
   padding-top: 0.5rem;
 }
 .phone {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 .mail {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 .logo {
   margin-right: 0.5rem;
@@ -79,6 +79,46 @@
 }
 .person-title {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
+}
+/* experience section */
+.experiences {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #626977;
+}
+.experience {
+  padding-top: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.experience-title {
+  font-weight: 600;
+}
+.date-city-company {
+  width: 100%;
+  line-height: 1.4;
+}
+.company {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.city {
+  font-size: 0.8rem;
+}
+.date {
+  font-size: 0.8rem;
+}
+.job-description {
+  line-height: 1.4;
+}
+.job-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.description {
+  font-size: 0.8rem;
 }
