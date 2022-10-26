@@ -1,0 +1,19 @@
+.main {
+  gap: 3rem;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 3rem;
+}
+.cv-form {
+  height: 150vh;
+  width: 794px;
+  background-color: #eeeeee;
+}
+.cv-preview {
+  height: 1123px;
+  width: 794px;
+  border: 1px solid black;
+  position: sticky;
+  top: 1rem;
+}
