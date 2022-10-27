@@ -4,6 +4,7 @@ import { IoLocation } from "react-icons/io5";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
 import Links from "./CvPrevLinks";
 import Experience from "./CvPrevExperience";
+import Education from "./CvPrevEducation";
 
 class CvPrev extends React.Component {
   constructor(props) {
@@ -26,13 +27,7 @@ class CvPrev extends React.Component {
           <div className="social-media">
             <h3 className="social-media-title">WEBSITE & SOCIAL LINKS</h3>
             {this.props.links.map((link) => {
-              return (
-                <Links
-                  site={link.site}
-                  url={link.url}
-                  key={this.props.links.indexOf(link)}
-                />
-              );
+              return <Links site={link.site} url={link.url} key={link.id} />;
             })}
           </div>
         </div>
@@ -70,43 +65,26 @@ class CvPrev extends React.Component {
                   from={experience.from}
                   to={experience.to}
                   jobDescription={experience.jobDesciption}
-                  key={this.props.experiences.indexOf(experience)}
+                  key={experience.id}
                 />
               );
             })}
           </div>
           <div className="educations">
             <h3 className="education-title">EDUCATION</h3>
-            <div className="education">
-              <div className="uni-city-date">
-                <h4 className="university">University Of Example</h4>
-                <p className="city">Example City</p>
-                <p className="date">2012-2016</p>
-              </div>
-              <div className="edu-description">
-                <h4 className="program-name">Bachelor Of Computer Science</h4>
-                <p className="program-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
-                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
-                  libero, ac pharetra erat est sit amet tellus.
-                </p>
-              </div>
-            </div>
-            <div className="education">
-              <div className="uni-city-date">
-                <h4 className="university">University Of Example</h4>
-                <p className="city">Example City</p>
-                <p className="date">2012-2016</p>
-              </div>
-              <div className="edu-description">
-                <h4 className="program-name">Master of IT</h4>
-                <p className="program-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet.
-                </p>
-              </div>
-            </div>
+            {this.props.educations.map((education) => {
+              return (
+                <Education
+                  uni={education.uni}
+                  city={education.city}
+                  degree={education.degree}
+                  degreeDescription={education.degreeDescription}
+                  from={education.from}
+                  to={education.to}
+                  key={education.id}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

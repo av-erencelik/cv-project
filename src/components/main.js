@@ -44,7 +44,7 @@ class Main extends React.Component {
       ],
       links: [
         {
-          id: "",
+          id: uuidv4(),
           site: "",
           url: "",
         },
