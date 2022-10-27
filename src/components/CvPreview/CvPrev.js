@@ -3,16 +3,14 @@ import "../../styles/CvPrev.css";
 import { IoLocation } from "react-icons/io5";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
 import Links from "./CvPrevLinks";
+import Experience from "./CvPrevExperience";
+
 class CvPrev extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    console.log(this.props.experience);
-    console.log(this.props.personalInfo);
-    console.log(this.props.education);
-    console.log(this.props.links);
     return (
       <div className="cv-preview">
         <div className="left-side">
@@ -63,52 +61,19 @@ class CvPrev extends React.Component {
           </div>
           <div className="experiences">
             <h3 className="experience-title">WORK EXPERIENCE</h3>
-            <div className="experience">
-              <div className="date-city-company">
-                <h4 className="company">Example Ltd</h4>
-                <p className="city">Example City</p>
-                <p className="date">2016-2018</p>
-              </div>
-              <div className="job-description">
-                <h4 className="job-title">Junior Web Developer</h4>
-                <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
-                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
-                  libero, ac pharetra erat est sit amet tellus.
-                </p>
-              </div>
-            </div>
-            <div className="experience">
-              <div className="date-city-company">
-                <h4 className="company">Example Ltd</h4>
-                <p className="city">Example City</p>
-                <p className="date">2016-2018</p>
-              </div>
-              <div className="job-description">
-                <h4 className="job-title">Junior Web Developer</h4>
-                <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet nisl sed vestibulum.
-                </p>
-              </div>
-            </div>
-            <div className="experience">
-              <div className="date-city-company">
-                <h4 className="company">Example Example Example Ltd</h4>
-                <p className="city">Example City</p>
-                <p className="date">2016-2018</p>
-              </div>
-              <div className="job-description">
-                <h4 className="job-title">Junior Web Developer</h4>
-                <p className="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum tempus imperdiet nisl sed vestibulum. Donec
-                  gravida, nulla eget blandit fermentum, mauris nisi rutrum
-                  libero, ac pharetra erat est sit amet tellus.
-                </p>
-              </div>
-            </div>
+            {this.props.experiences.map((experience) => {
+              return (
+                <Experience
+                  position={experience.position}
+                  company={experience.company}
+                  city={experience.city}
+                  from={experience.from}
+                  to={experience.to}
+                  jobDescription={experience.jobDesciption}
+                  key={this.props.experiences.indexOf(experience)}
+                />
+              );
+            })}
           </div>
           <div className="educations">
             <h3 className="education-title">EDUCATION</h3>

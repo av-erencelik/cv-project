@@ -20,7 +20,7 @@ class Main extends React.Component {
         about: "",
         phone: "",
       },
-      experience: [
+      experiences: [
         {
           id: uuidv4(),
           position: "",
@@ -31,7 +31,7 @@ class Main extends React.Component {
           jobDescription: "",
         },
       ],
-      education: [
+      educations: [
         {
           id: uuidv4(),
           uni: "",
@@ -58,8 +58,8 @@ class Main extends React.Component {
         <div className="cv-form"></div>
         <PrintCv
           personalInfo={this.state.personalInfo}
-          experience={this.state.experience}
-          education={this.state.education}
+          experiences={this.state.experiences}
+          educations={this.state.educations}
           links={this.state.links}
         />
       </main>
