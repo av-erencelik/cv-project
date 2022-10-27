@@ -51,7 +51,14 @@ export class PrintCv extends React.Component {
   render() {
     return (
       <>
-        <CvPrev ref={this.setComponentRef} text={this.state.text} />
+        <CvPrev
+          ref={this.setComponentRef}
+          text={this.state.text}
+          personalInfo={this.props.personalInfo}
+          experience={this.props.experience}
+          education={this.props.education}
+          links={this.props.links}
+        />
         <ReactToPrint
           content={this.reactToPrintContent}
           documentTitle="Cv"

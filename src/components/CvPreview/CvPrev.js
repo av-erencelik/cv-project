@@ -2,68 +2,62 @@ import React from "react";
 import "../../styles/CvPrev.css";
 import { IoLocation } from "react-icons/io5";
 import { AiFillPhone, AiFillMail } from "react-icons/ai";
-
+import Links from "./CvPrevLinks";
 class CvPrev extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    console.log(this.props.experience);
+    console.log(this.props.personalInfo);
+    console.log(this.props.education);
+    console.log(this.props.links);
     return (
       <div className="cv-preview">
         <div className="left-side">
           <img
-            src="./example.webp"
+            src={this.props.personalInfo.photo}
             alt="example"
             className="profile-photo"
           ></img>
           <div className="about">
             <h3 className="about-title">ABOUT ME</h3>
-            <p className="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              dicta minus molestiae vel beatae natus eveniet ratione temporibus
-              aperiam harum alias officiis assumenda officia quibusdam deleniti
-              eos cupiditate dolore doloribus! Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Qui dicta minus molestiae vel beatae
-              natus eveniet ratione temporibus aperiam harum alias officiis
-              assumenda officia quibusdam deleniti eos cupiditate dolore
-              doloribus!
-            </p>
+            <p className="about-text">{this.props.personalInfo.about}</p>
           </div>
           <div className="social-media">
             <h3 className="social-media-title">WEBSITE & SOCIAL LINKS</h3>
-            <div className="link">
-              <h4 className="link-title">Github:</h4>
-              <p className="link-url">github.com/example</p>
-            </div>
-            <div className="link">
-              <h4 className="link-title">LinkedIn:</h4>
-              <p className="link-url">linkedin.com/in/example</p>
-            </div>
-            <div className="link">
-              <h4 className="link-title">Website:</h4>
-              <p className="link-url">www.example.com</p>
-            </div>
+            {this.props.links.map((link) => {
+              return (
+                <Links
+                  site={link.site}
+                  url={link.url}
+                  key={this.props.links.indexOf(link)}
+                />
+              );
+            })}
           </div>
         </div>
         <div className="right-side">
           <div className="personal-info">
             <div className="name-title">
-              <h1 className="name">Name Surname</h1>
-              <h3 className="person-title">Junior Web Developer</h3>
+              <h1 className="name">
+                {this.props.personalInfo.name} {this.props.personalInfo.surname}
+              </h1>
+              <h3 className="person-title">{this.props.personalInfo.title}</h3>
             </div>
             <div className="contact">
               <p className="address">
                 <IoLocation className="logo" />
-                Cecelia Havens 456 White Finch St. North Augusta, SC 29860
+                {this.props.personalInfo.address}
               </p>
               <p className="phone">
                 <AiFillPhone className="logo" />
-                +1234-567-8910
+                {this.props.personalInfo.phone}
               </p>
               <p className="mail">
                 <AiFillMail className="logo" />
-                name.surname@gmail.com
+                {this.props.personalInfo.email}
               </p>
             </div>
           </div>
