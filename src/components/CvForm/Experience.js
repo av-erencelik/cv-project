@@ -55,7 +55,12 @@ class Experience extends React.Component {
             className="input"
           ></textarea>
         </div>
-        <button className="delete">DELETE</button>
+        <button
+          className="delete"
+          onClick={() => this.props.onDeleteExperience(this.props.id)}
+        >
+          DELETE
+        </button>
       </>
     );
   }

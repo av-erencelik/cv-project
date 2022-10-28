@@ -11,7 +11,11 @@ class CvForm extends React.Component {
           onPhotoLoad={this.props.onPhotoLoad}
           onChangePersonalInfo={this.props.onChangePersonalInfo}
         />
-        <Experiences />
+        <Experiences
+          experiences={this.props.experiences}
+          onAddExperience={this.props.onAddExperience}
+          onDeleteExperience={this.props.onDeleteExperience}
+        />
       </div>
     );
   }

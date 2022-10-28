@@ -7,9 +7,19 @@ class Experiences extends React.Component {
       <section className="experience-input">
         <h3 className="input-title">EXPERIENCE</h3>
         <div className="experience-input-groups">
-          <Experience />
+          {this.props.experiences.map((experience) => {
+            return (
+              <Experience
+                key={experience.id}
+                id={experience.id}
+                onDeleteExperience={this.props.onDeleteExperience}
+              />
+            );
+          })}
         </div>
-        <button className="add">ADD</button>
+        <button className="add" onClick={this.props.onAddExperience}>
+          ADD
+        </button>
       </section>
     );
   }

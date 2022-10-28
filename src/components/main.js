@@ -76,12 +76,42 @@ class Main extends React.Component {
     }));
   };
 
+  handleAddExperience = (e) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      experiences: [
+        ...prevState.experiences,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+          jobDescription: "",
+        },
+      ],
+    }));
+  };
+
+  handleDeleteExperience = (id) => {
+    const newExperiences = this.state.experiences.filter(
+      (experience) => experience.id !== id
+    );
+    this.setState((prevState) => {
+      return { ...prevState, experiences: newExperiences };
+    });
+  };
+
   render() {
     return (
       <main className="main">
         <CvForm
           onPhotoLoad={this.handleFileLoader}
           onChangePersonalInfo={this.handleChangePersonalInfo}
+          experiences={this.state.experiences}
+          onAddExperience={this.handleAddExperience}
+          onDeleteExperience={this.handleDeleteExperience}
         />
         <PrintCv
           personalInfo={this.state.personalInfo}
