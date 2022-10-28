@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/CvPrev.css";
-import { IoLocation } from "react-icons/io5";
-import { AiFillPhone, AiFillMail } from "react-icons/ai";
 import Links from "./CvPrevLinks";
 import Experience from "./CvPrevExperience";
 import Education from "./CvPrevEducation";
+import { IoLocation } from "react-icons/io5";
+import { AiFillPhone, AiFillMail } from "react-icons/ai";
 
 class CvPrev extends React.Component {
   constructor(props) {
