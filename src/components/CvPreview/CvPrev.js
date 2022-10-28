@@ -46,7 +46,7 @@ class CvPrev extends React.Component {
               </p>
               <p className="phone">
                 <AiFillPhone className="logo" />
-                {this.props.personalInfo.phone}
+                {this.props.personalInfo.phoneNumber}
               </p>
               <p className="mail">
                 <AiFillMail className="logo" />
