@@ -64,7 +64,7 @@ class CvPrev extends React.Component {
                   city={experience.city}
                   from={experience.from}
                   to={experience.to}
-                  jobDescription={experience.jobDesciption}
+                  jobDescription={experience.jobDescription}
                   key={experience.id}
                 />
               );

@@ -13,6 +13,7 @@ class Experiences extends React.Component {
                 key={experience.id}
                 id={experience.id}
                 onDeleteExperience={this.props.onDeleteExperience}
+                onChangeExperience={this.props.onChangeExperience}
               />
             );
           })}

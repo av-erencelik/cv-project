@@ -102,6 +102,18 @@ class Main extends React.Component {
       return { ...prevState, experiences: newExperiences };
     });
   };
+  handleChangeExperience = (e, id) => {
+    const { name, value } = e.target;
+    const newExperience = this.state.experiences.map((experience) => {
+      if (experience.id === id) {
+        return { ...experience, [name]: value };
+      }
+      return experience;
+    });
+    this.setState((prevState) => {
+      return { ...prevState, experiences: [...newExperience] };
+    });
+  };
 
   render() {
     return (
@@ -112,6 +124,7 @@ class Main extends React.Component {
           experiences={this.state.experiences}
           onAddExperience={this.handleAddExperience}
           onDeleteExperience={this.handleDeleteExperience}
+          onChangeExperience={this.handleChangeExperience}
         />
         <PrintCv
           personalInfo={this.state.personalInfo}

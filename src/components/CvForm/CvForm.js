@@ -15,6 +15,7 @@ class CvForm extends React.Component {
           experiences={this.props.experiences}
           onAddExperience={this.props.onAddExperience}
           onDeleteExperience={this.props.onDeleteExperience}
+          onChangeExperience={this.props.onChangeExperience}
         />
       </div>
     );
