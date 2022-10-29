@@ -121,12 +121,12 @@ class Main extends React.Component {
         ...prevState.educations,
         {
           id: uuidv4(),
-          position: "",
-          company: "",
+          uni: "",
           city: "",
+          degree: "",
+          degreeDescription: "",
           from: "",
           to: "",
-          jobDescription: "",
         },
       ],
     }));
@@ -151,6 +151,38 @@ class Main extends React.Component {
       return { ...prevState, educations: [...newEducation] };
     });
   };
+  handleAddLink = (e) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      links: [
+        ...prevState.links,
+        {
+          id: uuidv4(),
+          site: "",
+          url: "",
+        },
+      ],
+    }));
+  };
+  handleDeleteLink = (id) => {
+    const newLinks = this.state.links.filter((link) => link.id !== id);
+    this.setState((prevState) => {
+      return { ...prevState, links: newLinks };
+    });
+  };
+  handleChangeLink = (e, id) => {
+    const { name, value } = e.target;
+    const newLink = this.state.links.map((link) => {
+      if (link.id === id) {
+        return { ...link, [name]: value };
+      }
+      return link;
+    });
+    this.setState((prevState) => {
+      return { ...prevState, links: [...newLink] };
+    });
+  };
+
   render() {
     return (
       <main className="main">
@@ -165,6 +197,10 @@ class Main extends React.Component {
           onAddEducation={this.handleAddEducation}
           onDeleteEducation={this.handleDeleteEducation}
           onChangeEducation={this.handleChangeEducation}
+          links={this.state.links}
+          onChangeLink={this.handleChangeLink}
+          onAddLink={this.handleAddLink}
+          onDeleteLink={this.handleDeleteLink}
         />
         <PrintCv
           personalInfo={this.state.personalInfo}

@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/CvForm.css";
 import Educations from "./CvFormEducation";
 import Experiences from "./CvFormExperience";
+import Links from "./CvFormLinks";
 import PersonalInfo from "./CvFormPersonalInfo";
 
 class CvForm extends React.Component {
@@ -23,6 +24,12 @@ class CvForm extends React.Component {
           onAddEducation={this.props.onAddEducation}
           onDeleteEducation={this.props.onDeleteEducation}
           onChangeEducation={this.props.onChangeEducation}
+        />
+        <Links
+          links={this.props.links}
+          onAddLink={this.props.onAddLink}
+          onDeleteLink={this.props.onDeleteLink}
+          onChangeLink={this.props.onChangeLink}
         />
       </div>
     );
