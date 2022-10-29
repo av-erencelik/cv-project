@@ -114,7 +114,43 @@ class Main extends React.Component {
       return { ...prevState, experiences: [...newExperience] };
     });
   };
-
+  handleAddEducation = (e) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      educations: [
+        ...prevState.educations,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+          jobDescription: "",
+        },
+      ],
+    }));
+  };
+  handleDeleteEducation = (id) => {
+    const newEducations = this.state.educations.filter(
+      (education) => education.id !== id
+    );
+    this.setState((prevState) => {
+      return { ...prevState, educations: newEducations };
+    });
+  };
+  handleChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+    const newEducation = this.state.educations.map((education) => {
+      if (education.id === id) {
+        return { ...education, [name]: value };
+      }
+      return education;
+    });
+    this.setState((prevState) => {
+      return { ...prevState, educations: [...newEducation] };
+    });
+  };
   render() {
     return (
       <main className="main">
@@ -125,6 +161,10 @@ class Main extends React.Component {
           onAddExperience={this.handleAddExperience}
           onDeleteExperience={this.handleDeleteExperience}
           onChangeExperience={this.handleChangeExperience}
+          educations={this.state.educations}
+          onAddEducation={this.handleAddEducation}
+          onDeleteEducation={this.handleDeleteEducation}
+          onChangeEducation={this.handleChangeEducation}
         />
         <PrintCv
           personalInfo={this.state.personalInfo}
