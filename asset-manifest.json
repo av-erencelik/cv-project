@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/http://av-erencelik.github.io/cv-project/static/css/main.d6e68252.css",
-    "main.js": "/http://av-erencelik.github.io/cv-project/static/js/main.14c5d045.js",
-    "static/media/example.webp": "/http://av-erencelik.github.io/cv-project/static/media/example.9999920b9e6c6830ebc4.webp",
-    "index.html": "/http://av-erencelik.github.io/cv-project/index.html",
-    "main.d6e68252.css.map": "/http://av-erencelik.github.io/cv-project/static/css/main.d6e68252.css.map",
-    "main.14c5d045.js.map": "/http://av-erencelik.github.io/cv-project/static/js/main.14c5d045.js.map"
+    "main.css": "./http://av-erencelik.github.io/cv-project/static/css/main.d6e68252.css",
+    "main.js": "./http://av-erencelik.github.io/cv-project/static/js/main.9e2f1926.js",
+    "static/media/example.webp": "./http://av-erencelik.github.io/cv-project/static/media/example.9999920b9e6c6830ebc4.webp",
+    "index.html": "./http://av-erencelik.github.io/cv-project/index.html",
+    "main.d6e68252.css.map": "./http://av-erencelik.github.io/cv-project/static/css/main.d6e68252.css.map",
+    "main.9e2f1926.js.map": "./http://av-erencelik.github.io/cv-project/static/js/main.9e2f1926.js.map"
   },
   "entrypoints": [
     "static/css/main.d6e68252.css",
-    "static/js/main.14c5d045.js"
+    "static/js/main.9e2f1926.js"
   ]
 }
