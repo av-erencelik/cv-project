@@ -18,7 +18,9 @@
 .personal-info-input {
   padding: 1rem;
 }
-.experience-input {
+.experience-input,
+.education-input,
+.links-input {
   padding: 1rem;
 }
 .input-title {
